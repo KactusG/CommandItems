@@ -54,9 +54,12 @@ items:
     parameters:
       range: 10
     actions:
-      - { action: MATH_EXPR, target: "YOFF", expr: "rand() * randomOffset + fixedHeight", actions: [
-        { action: COMMAND, by: PLAYER_PRIVILEGED, perm: minecraft.command.teleport, command: "tp ~ ~{YOFF} ~" },
-        { action: MESSAGE, to: PLAYER, message: "&aWeeee ... ouch! (Sent you up roughly {YOFF}m)" }
+      - { action: REPEAT, from: 0, to: 31, increment: 1, delay: 0, period: 4, actions: [
+        { action: MATH_EXPR, target: xoff, expr: "x + range * sin(2*pi * i/32) + randn()*range/5", actions: [
+          { action: MATH_EXPR, target: zoff, expr: "z + range * cos(2*pi * i/32) + randn()*range/5", actions: [
+            { action: COMMAND, by: PLAYER_PRIVILEGED, perm: minecraft.command.summon, command: "summon minecraft:zombie {xoff} ~ {zoff}" }
+          ] }
+        ] }
       ] }
   helpstick:
     item:
