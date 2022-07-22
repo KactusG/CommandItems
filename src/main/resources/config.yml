@@ -49,8 +49,8 @@ items:
       name: "&c&lZoooombies"
       lore: [ "&1Make sure you're prepared for what's coming!" ]
       glow: true
-      skullUser: Zombie
-      # skullUser: 02b0e86d-c86a-4ae7-bc41-015d21f80c1c # Alternatively provide the uuid
+      skullTexture: Zombie
+      # skullTexture: 02b0e86d-c86a-4ae7-bc41-015d21f80c1c # Alternatively provide the uuid
     consumed: true
     cooldown: 30
     parameters:
