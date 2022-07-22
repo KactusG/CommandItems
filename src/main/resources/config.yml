@@ -39,9 +39,7 @@ items:
     actions:
       - { action: MATH_EXPR, target: "YOFF", expr: "rand() * randomOffset + fixedHeight", actions: [
         { action: COMMAND, by: PLAYER_PRIVILEGED, perm: minecraft.command.teleport, command: "tp ~ ~{YOFF} ~" },
-        { action: MATH_EXPR, round: true, target: "YOFF", expr: "YOFF", actions: [
-          { action: MESSAGE, to: PLAYER, message: "&aWeeee ... ouch! (Sent you up roughly {YOFF}m)" }
-        ] }
+        { action: MESSAGE, to: PLAYER, message: "&aWeeee ... ouch! (Sent you up roughly {YOFF}m)" }
       ] }
   toomanyzombies:
     item:
