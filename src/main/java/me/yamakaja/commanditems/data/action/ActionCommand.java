@@ -49,7 +49,7 @@ public class ActionCommand extends Action {
 
     @Override
     public void process(InterpretationContext context) {
-        String command = context.resolveLocalsInString(this.command);
+        String command = context.resolveLocalsInString(this.command).replace(",",".");
 
         switch (this.commandMode) {
             case PLAYER:
